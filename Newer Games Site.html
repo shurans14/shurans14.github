@@ -1,0 +1,70 @@
+
+<html>
+<head>
+	<title> Nostalgia Gaming Home(newer games)</title>
+	<style>
+	body {
+  background-image: url('1719872.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a{
+color:white
+}
+
+</style>
+</head>
+<div class="background-image">
+<body <body text = "#ffffff"><font face = "Calibri" size = "6" >
+
+<hr color = "Black"  width = "100%" color ="Black" />
+
+	<!-- Heading -->
+	<h1 align = "center" >Welcome to The Home of Nostalgic Games!</h1>
+	
+	<center>
+	 <a href = "my game site.html" > Home Page</a>|
+	 <a href = "Classic Games Site.html" > Classic Games </a>
+	
+	</center>  
+
+
+	<!-- Game selection -->
+	<form action=""><center>
+		<label for="game-select" >Select a Game:</label>
+		<!-- Importing a game from a chosen website by using the URL-->
+		<select id="game-select" name="game">
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#pokemonemerald">Pokemon Emerald</option>
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#pokemonruby">Pokemon Ruby</option>
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#pokemonsapphire">Pokemon Sapphire</option>
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#pokemonred">Pokemon Fire Red</option>
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#pokemongreen">Pokemon Leaf Green</option>
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#mysteryred">Pokemon Mystery Dungeon Red</option>
+			<option value="https://theclashman2.github.io/GBA-Emulator/launcher.html#mysteryred">Pokemon Mystery Dungeon Red</option>
+			
+		</select>
+		<!-- Button for choosing the game the user wants to play -->
+		<button type="submit" >Play Game</button>
+	</form></center>
+	<hr color = "Black"  width = "100%" color ="Black" />
+	<!-- Game iframe -->
+	<div id="game-container">
+		<!-- iframe will be added here -->
+	</div>
+	
+	<!-- Script that handlea game selection and iframe embedding -->
+	<script>
+		const gameSelect = document.getElementById("game-select");
+		const gameContainer = document.getElementById("game-container");
+		
+		// Embed selected game in iframe when form is submitted
+		document.querySelector("form").addEventListener("submit", (event) => {
+			event.preventDefault();
+			const selectedGame = gameSelect.value;
+			gameContainer.innerHTML = `<iframe src="${selectedGame}" width= 100% height="800"></iframe>`;
+		});
+	</script>
+</body>
+</html>
